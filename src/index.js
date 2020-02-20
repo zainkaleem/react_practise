@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationMenu from './Components/navbar';
+import BodySection from './Components/body_section';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.Fragment>
 <NavigationMenu />,
+<BodySection />,
 </React.Fragment>,
 document.getElementById('root'));
 
