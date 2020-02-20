@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 import {
   Collapse,
   Navbar,
@@ -11,50 +12,52 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
+  NavbarText, Button    
 } from 'reactstrap';
 
-const NavigationMenu = (props) => {
+const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+    <div className="nav-menubar">
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/"><strong>TICKET</strong></NavbarBrand>
+        <NavbarText><Button color="danger" size="sm">we are hiring</Button>{' '}</NavbarText>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="#">Platform</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="#">Features</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="#">Industries</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Pricing</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Customer</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Resources</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Login</NavLink>
+            </NavItem>
+            <NavItem>
+            <Button color="info">Signup</Button>{' '}
+            </NavItem>
+            
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
 }
 
-export default NavigationMenu;
+export default Navigation;
