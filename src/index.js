@@ -4,6 +4,8 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationMenu from './Components/navbar';
 import BodySection from './Components/body_section';
+import FooterSection from './Components/footer';
+
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
