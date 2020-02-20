@@ -12,6 +12,7 @@ ReactDOM.render(
     <React.Fragment>
 <NavigationMenu />,
 <BodySection />,
+<FooterSection />,
 </React.Fragment>,
 document.getElementById('root'));
 

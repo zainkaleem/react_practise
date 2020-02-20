@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-class BodySection extends React.Component{
+class FooterSection extends React.Component{
 
     render(){
         return (
             <div>
-            <h1>Who lives in my Garage?</h1>
+            <h1>Footer</h1>
        
             </div>
           );
@@ -14,4 +14,4 @@ class BodySection extends React.Component{
 
 }
 
-export default BodySection;
+export default FooterSection;
